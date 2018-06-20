@@ -15,7 +15,7 @@ public class App
         try {
         	ObjectMapper mapper = new ObjectMapper();
         	
-        	Student myStudent = mapper.readValue(new File("data/sample-lite.json"), Student.class);
+        	Student myStudent = mapper.readValue(new File("data/sample-full.json"), Student.class);
         	
         	System.out.println("First Name: " + myStudent.getFirstName());
         	System.out.println("Last Name: " + myStudent.getLastName());
