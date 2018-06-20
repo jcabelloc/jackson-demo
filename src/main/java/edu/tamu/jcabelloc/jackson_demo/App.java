@@ -1,13 +1,28 @@
 package edu.tamu.jcabelloc.jackson_demo;
 
+import java.io.File;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 /**
- * Hello world!
+ * Jackson Demo
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        try {
+        	ObjectMapper mapper = new ObjectMapper();
+        	
+        	Student myStudent = mapper.readValue(new File("data/sample-lite.json"), Student.class);
+        	
+        	System.out.println("First Name: " + myStudent.getFirstName());
+        	System.out.println("Last Name: " + myStudent.getLastName());
+        }
+        catch (Exception e) {
+        	e.printStackTrace();
+        }
+    	
     }
 }
