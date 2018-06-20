@@ -1,5 +1,8 @@
 package edu.tamu.jcabelloc.jackson_demo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class Student {
 	private int id;
 	private String firstName;
